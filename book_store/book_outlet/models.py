@@ -9,7 +9,8 @@ class Book(models.Model):
     rating=models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
     author=models.CharField(null=True,max_length=100)
     is_bestselling=models.BooleanField(default=False)
-    slug=models.SlugField(default='',null=False) #harry potter 1 ->harry-potter-1
+    #db_index=True tao chi muc giup tim kiem nhanh hon
+    slug=models.SlugField(default='',null=False,db_index=True) #harry potter 1 ->harry-potter-1
 
     def save(self,*args,**kwargs):
         self.slug=slugify(self.title)
@@ -19,5 +20,5 @@ class Book(models.Model):
         return f'{self.id}|{self.title}|{self.rating}|{self.author}|{self.is_bestselling})|{self.slug}'
     
     def get_absolute_url(self):
-        return reverse("book-detail", args=[self.id])
+        return reverse("book-detail", args=[self.slug])
     
