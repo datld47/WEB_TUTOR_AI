@@ -12,4 +12,8 @@
 - orderby(): sap xep tang dan, giam dan
 ## V1.0.2
 - Django Admin Feature
+## V1.0.3
+- Config Admin Setting
+    - prepopulated_fields: tu dong dien
+    - list_filter: tinh nang loc
 

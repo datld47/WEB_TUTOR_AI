@@ -11,10 +11,10 @@ class Book(models.Model):
     is_bestselling=models.BooleanField(default=False)
     #db_index=True tao chi muc giup tim kiem nhanh hon
     #blank=True,editable=False de khong hien trong trang admin
-    slug=models.SlugField(default='',blank=True,editable=False,null=False,db_index=True) #harry potter 1 ->harry-potter-1
+    slug=models.SlugField(default='',blank=True,null=False,db_index=True) #harry potter 1 ->harry-potter-1
 
     def save(self,*args,**kwargs):
-        self.slug=slugify(self.title)
+        #self.slug=slugify(self.title)
         super().save(*args,**kwargs)
 
     def __str__(self):
