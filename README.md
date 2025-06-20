@@ -6,3 +6,7 @@
 # branch-dat-001
 - using the slug 
 - updating Field Options : db_index=True giup truy van nhanh
+## V1.0.1
+- aggregation : thuc hien phep tinh: COUNT(),SUM()...
+- orderby(): sap xep tang dan, giam dan
+
