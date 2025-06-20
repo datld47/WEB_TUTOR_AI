@@ -10,7 +10,8 @@ class Book(models.Model):
     author=models.CharField(null=True,max_length=100)
     is_bestselling=models.BooleanField(default=False)
     #db_index=True tao chi muc giup tim kiem nhanh hon
-    slug=models.SlugField(default='',null=False,db_index=True) #harry potter 1 ->harry-potter-1
+    #blank=True,editable=False de khong hien trong trang admin
+    slug=models.SlugField(default='',blank=True,editable=False,null=False,db_index=True) #harry potter 1 ->harry-potter-1
 
     def save(self,*args,**kwargs):
         self.slug=slugify(self.title)
