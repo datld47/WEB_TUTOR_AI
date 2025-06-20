@@ -9,13 +9,17 @@ git commit -m "Initial commit of WEB_TUTOR_AI project"
 git push -u origin main
 
 //mot so lenh thao tac tren git
-//--Tao mot nhanh moi
+
+//---Tao mot nhanh moi---
+git checkout -d 001_Chuoi_thoat
+//---Di chuyen den nhanh bat ky---
 git checkout 001_Chuoi_thoat
+//---push du lieu nhanh len store---
 git add .
 git commit -m "message to note"
 git push -u origin 001_Chuoi_thoat
 
-//--ghep nhanh phu vao nhanh chinh
+//---ghep nhanh phu vao nhanh chinh---
 git checkout main
 git pull origin main
 git merge 001_Chuoi_thoat
@@ -23,7 +27,7 @@ git branch -d 001_Chuoi_thoat
 git push origin --delete 001_Chuoi_thoat
 
 
-//quay lai cac phien ban cung nhanh - su dung hash
+//---quay lai cac phien ban cung nhanh - su dung hash---
 git log --oneline --graph --all
 
 * 118c253 (main) branch-dat-001-v1.0.3
