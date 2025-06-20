@@ -16,4 +16,7 @@
 - Config Admin Setting
     - prepopulated_fields: tu dong dien
     - list_filter: tinh nang loc
-
+## V1.0.4
+- Relationship
+    - delete all database
+    - One-many
