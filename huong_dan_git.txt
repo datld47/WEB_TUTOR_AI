@@ -22,3 +22,14 @@ git merge 001_Chuoi_thoat
 git branch -d 001_Chuoi_thoat
 git push origin --delete 001_Chuoi_thoat
 
+
+//quay lai cac phien ban cung nhanh - su dung hash
+git log --oneline --graph --all
+
+* 118c253 (main) branch-dat-001-v1.0.3
+* 960dbc5 branch-dat-001-v1.0.2
+* 1a8d5c6 branch-dat-001-v1.0.1
+* 5b77354 branch-dat-001-v1.0
+* 786110f branch-dat-001-v1.0
+
+git revert 118c253 
