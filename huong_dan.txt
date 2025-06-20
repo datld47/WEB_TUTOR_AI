@@ -1,5 +1,5 @@
+//tao requirements
 pip freeze > requirements.txt
-
 
 //---cai dat thu vien
 pip install django

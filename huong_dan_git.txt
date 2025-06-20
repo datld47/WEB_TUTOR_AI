@@ -1,0 +1,24 @@
+//cai dat git
+
+git --version
+git config --global user.name datld47
+git config --global user.email datldsave@gmail.com
+git init
+git add .
+git commit -m "Initial commit of WEB_TUTOR_AI project"
+git push -u origin main
+
+//mot so lenh thao tac tren git
+//--Tao mot nhanh moi
+git checkout 001_Chuoi_thoat
+git add .
+git commit -m "message to note"
+git push -u origin 001_Chuoi_thoat
+
+//--ghep nhanh phu vao nhanh chinh
+git checkout main
+git pull origin main
+git merge 001_Chuoi_thoat
+git branch -d 001_Chuoi_thoat
+git push origin --delete 001_Chuoi_thoat
+
