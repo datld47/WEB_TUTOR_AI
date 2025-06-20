@@ -1,5 +1,14 @@
+//cai dat moi truong ao
+pip install virtualenv
+virtualenv  myenv
+cd myenv/Scripts
+activate
+ctrl+shift+P:  python:select interpreter chon  python(myenv)
+
 //tao requirements
 pip freeze > requirements.txt
+//cai dat requirements
+pip install -r requirements.txt
 
 //---cai dat thu vien
 pip install django
