@@ -1,3 +1,5 @@
+python manage.py shell
+
 >>> from book_outlet.models import Book,Author
 >>> jkrowing=Author(first_name='J.K',last_name='Rowling')
 >>> jkrowing.save()

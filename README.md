@@ -20,7 +20,7 @@
 - Relationship
     - delete all database
     - One-many
-
 ## V1.0.5
-- Relationship
-    -one one
+- Relationship: one-one
+## V1.0.6
+- Relationship: many-many
