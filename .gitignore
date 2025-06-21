@@ -1,3 +1,5 @@
 # Virtual environments
 myenv/
 #file other
+book_store/
+django_project/

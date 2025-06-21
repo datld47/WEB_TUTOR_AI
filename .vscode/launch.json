@@ -14,7 +14,7 @@
             ],
             "django": true,
             "autoStartBrowser": true,
-            "program": "${workspaceFolder}\\book_store\\manage.py"
+            "program": "${workspaceFolder}\\feedback\\manage.py"
         },
 
         {
