@@ -13,3 +13,6 @@
 - auto validation
 - add style for form
 - store form data in a database
+
+## V2.0.4
+- Model form
