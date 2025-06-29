@@ -5,3 +5,5 @@
 ## V2.0.1
 - get / post
 
+## V2.0.2
+- manual validation
