@@ -16,3 +16,6 @@
 
 ## V2.0.4
 - Model form
+
+## V2.0.5
+- Class Based View
