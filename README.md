@@ -19,3 +19,7 @@
 
 ## V2.0.5
 - Class Based View
+
+## V2.0.6
+- TemplateView
+- Showing a Detail Template

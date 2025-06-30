@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import ReviewForm
 from django.views import View
-
+from django.views.generic.base import TemplateView
+from .models import Review
 
 class ReviewView(View):
     def get(self,request):
@@ -16,17 +17,31 @@ class ReviewView(View):
             return HttpResponseRedirect("/thank-you")
         return render(request,"reviews/review.html",{"form":form})
 
+# class ThankYouView(View):
+#     def get(self,request):
+#         return render(request,'reviews/thank-you.html')
 
-# # Create your views here.
-# def review(request):
-#     if request.method=='POST':
-#         form=ReviewForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect("/thank-you")
-#     else:    
-#         form = ReviewForm()
-#     return render(request,"reviews/review.html",{"form":form})
+class ThankYouView(TemplateView):
+    template_name='reviews/thank-you.html'
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+        context['message']='this works!'
+        return context
 
-def thank_you(request):
-    return render(request,'reviews/thank-you.html')
+class ReviewsListView(TemplateView):
+    template_name="reviews/review_list.html"
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+        reviews=Review.objects.all()
+        context['reviews']=reviews
+        return context
+    
+class SingleReviewView(TemplateView):
+    template_name='reviews/single_review.html'
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+        review_id=kwargs['id']
+        selected_review=Review.objects.get(pk=review_id)
+        context['review']=selected_review
+        return context
+        
