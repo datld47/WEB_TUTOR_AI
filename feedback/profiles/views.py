@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.conf import settings 
 from .forms import ProfileForm
 from .models import UserProfile
+
 # Create your views here.
 
 class CreateProfileView(View):

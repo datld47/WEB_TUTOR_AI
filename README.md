@@ -40,3 +40,6 @@
 
 ## V2.1.1
 - form with FileField
+
+## V2.1.2
+- form with ImageField
