@@ -23,3 +23,8 @@
 ## V2.0.6
 - TemplateView
 - Showing a Detail Template
+
+## V2.0.7
+- listView
+- detailView
+

@@ -3,7 +3,10 @@ from django.http import HttpResponseRedirect
 from .forms import ReviewForm
 from django.views import View
 from django.views.generic.base import TemplateView
+from django.views.generic import ListView,DetailView
 from .models import Review
+
+
 
 class ReviewView(View):
     def get(self,request):
@@ -28,20 +31,40 @@ class ThankYouView(TemplateView):
         context['message']='this works!'
         return context
 
-class ReviewsListView(TemplateView):
-    template_name="reviews/review_list.html"
-    def get_context_data(self, **kwargs):
-        context= super().get_context_data(**kwargs)
-        reviews=Review.objects.all()
-        context['reviews']=reviews
-        return context
+# class ReviewsListView(TemplateView):
+#     template_name="reviews/review_list.html"
+#     def get_context_data(self, **kwargs):
+#         context= super().get_context_data(**kwargs)
+#         reviews=Review.objects.all()
+#         context['reviews']=reviews
+#         return context
     
-class SingleReviewView(TemplateView):
+class ReviewsListView(ListView):
+    template_name="reviews/review_list.html"
+    model=Review
+    context_object_name='reviews'
+    
+    #loc du lieu
+    
+    # def get_queryset(self):
+    #     base_querry= super().get_queryset()
+    #     data = base_querry.filter(rating__gt=4)
+    #     return data
+    
+ 
+   
+# class SingleReviewView(TemplateView):
+#     template_name='reviews/single_review.html'
+#     def get_context_data(self, **kwargs):
+#         context= super().get_context_data(**kwargs)
+#         review_id=kwargs['id']
+#         selected_review=Review.objects.get(pk=review_id)
+#         context['review']=selected_review
+#         return context
+        
+
+class SingleReviewView(DetailView):
     template_name='reviews/single_review.html'
-    def get_context_data(self, **kwargs):
-        context= super().get_context_data(**kwargs)
-        review_id=kwargs['id']
-        selected_review=Review.objects.get(pk=review_id)
-        context['review']=selected_review
-        return context
+    model=Review
+    
         
