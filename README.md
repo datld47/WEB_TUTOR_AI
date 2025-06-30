@@ -28,3 +28,6 @@
 - listView
 - detailView
 
+## V2.0.8
+- FormView
+
