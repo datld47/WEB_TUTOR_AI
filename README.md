@@ -49,3 +49,6 @@
 
 ## V2.1.4
 - Serving Upload file
+
+## V2.2
+- Session
