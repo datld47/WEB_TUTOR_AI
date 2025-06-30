@@ -125,3 +125,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 TEMP_DIR = BASE_DIR / 'temp'
+MEDIA_ROOT= BASE_DIR / 'uploads'
