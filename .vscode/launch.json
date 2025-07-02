@@ -13,8 +13,8 @@
                 "runserver"
             ],
             "django": true,
-            "autoStartBrowser": true,
-            "program": "${workspaceFolder}\\feedback\\manage.py"
+            "autoStartBrowser": false,
+            "program": "${workspaceFolder}\\my_site\\manage.py"
         },
 
         {

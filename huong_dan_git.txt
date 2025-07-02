@@ -9,8 +9,14 @@ git commit -m "Initial commit of WEB_TUTOR_AI project"
 git push -u origin main
 
 //mot so lenh thao tac tren git
+git remote add origin https://github.com/datld47/tutor-ai-app.git
+git branch -M main
+git push -u origin main
+
 
 //---Tao mot nhanh moi---
+git branch dat-branch-003
+
 git checkout -d 001_Chuoi_thoat
 //---Di chuyen den nhanh bat ky---
 git checkout 001_Chuoi_thoat
